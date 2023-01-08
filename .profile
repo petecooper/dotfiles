@@ -22,5 +22,5 @@ fi
 
 if [  -f "/swapfile" ] ; then
     echo -e '[\xE2\x9C\x94] Swapfile ready.' ; else
-    echo -e '**********************\n[\xE2\x9C\x98] Swapfile missing!\n**********************' ;
+    echo -e '*********************\n[\xE2\x9C\x98] Swapfile missing!\n*********************' ;
 fi
