@@ -17,7 +17,7 @@ if [ -f "/usr/bin/free" ] ; then
 fi
 
 if [ -f "/usr/bin/duf" ] ; then
-    duf --only local --only-fs ext4 --output mountpoint,size,used,avail,usage
+    duf --only local --only-fs ext4 --output mountpoint,size,used,avail,usage --width 115
 fi
 
 if [  -f "/swapfile" ] ; then
