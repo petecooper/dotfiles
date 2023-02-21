@@ -12,6 +12,13 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -f "$HOME/.sysadmin-scripts-installed" ] ; then
+    rm -rf $HOME/__*.sh \
+    && git clone --depth 1 https://github.com/petecooper/sysadmin-scripts.git $HOME/sysadmin-scripts/ \
+    && mv $HOME/sysadmin-scripts/*.sh $HOME \
+    && rm -rf $HOME/sysadmin-scripts
+fi
+
 if [ -f "/usr/bin/free" ] ; then
     free -h
 fi
