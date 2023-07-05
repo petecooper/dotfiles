@@ -14,7 +14,7 @@ fi
 
 if [ -f "$HOME/.sysadmin-scripts-installed" ] ; then
     rm -rf $HOME/__*.sh \
-    && git clone --depth 1 https://github.com/petecooper/sysadmin-scripts.git $HOME/sysadmin-scripts/ \
+    && git clone --depth 1 https://github.com/petecooper/sysadmin-scripts.git $HOME/sysadmin-scripts/ &> /dev/null \
     && mv $HOME/sysadmin-scripts/*.sh $HOME \
     && rm -rf $HOME/sysadmin-scripts \
     && echo -e '`sysadmin-scripts` updated.'
